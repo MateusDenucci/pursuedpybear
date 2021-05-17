@@ -59,7 +59,7 @@ def test_signal():
 
 def test_signal_once():
 
-    engine = GameEngine(Scene, basic_systems=[Quitter])
+    engine = GameEngine(Scene, basic_systems=[Quitter, Failer])
     with engine:
         engine.start()
         engine.loop_once()
